@@ -1,0 +1,13 @@
+<div id="menu">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <span id="subTitle">{{routerName}}</span>
+  <!-- yPosition="above"  yPosition="below" xPosition="before" xPosition="after" -->
+  <mat-menu #menu="matMenu" yPosition="below">
+    <nav>
+      <button mat-menu-item [routerLink]="['/']"  >Home</button>
+      <button mat-menu-item [routerLink]="['/games-component']" >Games</button>
+      <button mat-menu-item [routerLink]="['/developers-component']" >Developers</button>
+    </nav>
+  </mat-menu> 
+</div>
+<router-outlet></router-outlet>

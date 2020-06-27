@@ -1,0 +1,44 @@
+<div id="menu1">
+    <button mat-button (click)="list()"> List </button>
+    <button mat-button (click)="openModal()"> Add/Update </button>
+    <button mat-button (click)="delete()"> Delete </button>
+
+</div>
+
+<div class="cardWrapper">
+    <mat-card *ngFor="let d of data; let i = index" class="card">
+        <mat-card-title><input type="checkbox" name="Select" id="select" (click)="toggleSel($event, i)"
+                [checked]="checks[i]"> {{d.name}}</mat-card-title>
+        <mat-card-subtitle>{{d.place}}</mat-card-subtitle>
+        <mat-card-content>
+            <p> They are a {{d.rating}} rated developers </p>
+            <p> Famous Game: <span id="famousGame">{{d.games}}</span>
+        </mat-card-content>
+        <mat-card-actions align="end">
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<form class="modal">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <div>
+            <label>Name: </label>
+            <input type="text" name="Name" id="developerName">
+        </div>
+        <div>
+            <label>Place: </label>
+            <input type="text" name="Place" id="developerPlace">
+        </div>
+        <div>
+            <label>Rating: </label>
+            <input type="number" name="Rating" id="developerRating" min="0" max="5">
+        </div>
+        <div>
+            <label>Is it only game developer: </label>
+            <input type="checkbox" name="OnlyGameDev" id="developerOnlyGameDev">
+        </div>
+        <button mat-button (click)="add()">Send</button>
+        <button mat-button (click)="update()">Update</button>
+    </div>
+</form>

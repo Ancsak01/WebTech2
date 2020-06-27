@@ -1,0 +1,56 @@
+<div id="menu1">
+    <button mat-button (click)="list()"> List </button>
+    <button mat-button (click)="openModal()"> Add/Update </button>
+    <button mat-button (click)="delete()"> Delete </button>
+</div>
+
+<div class="cardWrapper">
+    <mat-card *ngFor="let d of data; let i = index" class="card">
+        <mat-card-title><input type="checkbox" name="Select" id="select" (click)="toggleSel($event, i)"
+                [checked]="checks[i]">{{d.name}}</mat-card-title>
+        <mat-card-subtitle>{{d.developer}}</mat-card-subtitle>
+        <mat-card-content>
+            <p> The play time for this game has been estimated to {{d.estPlayTime}} hour </p>
+            <p> Also sponsored by {{d.sponsoredBy}} </p>
+            <p> Supported platform: {{d.platform}} </p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<form class="modal">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <div>
+            <label>Name: </label>
+            <input type="text" name="Name" id="gamesName">
+        </div>
+        <div>
+            <label>Platform: </label>
+            <!-- <input type="text" name="Platform" id="gamesPlatform"> -->
+            <select name="Platform" id="gamesPlatform">
+                <option selected></option>
+                <option *ngFor="let platform of platforms" value="{{platform}}">{{platform}}</option>
+            </select>
+        </div>
+        <div>
+            <label>Estimated playtime: </label>
+            <input type="number" name="EstPT" id="gamesEstPlayTime" min="0">
+        </div>
+        <div>
+            <label>Developer: </label>
+            <input type="text" name="Developer" id="gamesDeveloper">
+            <!-- <select name="Developer" id="gamesDeveloper">
+                <option selected></option>
+                <option *ngFor="let devs of developers" value="{{devs}}">{{devs}}</option>
+            </select> -->
+        </div>
+        <div>
+            <label>Sponsor: </label>
+            <input type="text" name="Sponsor" id="gamesSponsor">
+        </div>
+        <button mat-button (click)="add()">Send</button>
+        <button mat-button (click)="update()">Update</button>
+    </div>
+</form>

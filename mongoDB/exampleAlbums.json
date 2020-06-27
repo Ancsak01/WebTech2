@@ -1,0 +1,30 @@
+[
+    {
+        "title": "L.A. Woman",
+        "artist": "The Doors",
+        "country": "USA",
+        "year": 1971,
+        "genre": "Rock",
+        "style": ["Blues Rock", "Classic Rock"],
+        "tracklist": ["The Changeling", "Love Her Madly", "Been Down So Long", "Cars Hiss By My Window", "L.A. Woman", "L'America", "Hyacinth House", "Crawling King Snake", "The WASP (Texas Radio And The Big Beat)", "Riders On The Storm"]
+    },
+    {
+        "title": "Vol. 4",
+        "artist": "Black Sabbath",
+        "country": "England",
+        "year": "1972",
+        "genre": "Rock",
+        "style": ["Hard Rock", "Heavy Metal"],
+        "tracklist": ["Wheels Of Confusion", "Tomorrow's Dream", "Changes", "FX", "Supernaut", "Snowblind", "Cornucopia", "Laguna Sunrise", "St. Vitus Dance", "Under The Sun"]
+    },
+    {
+        "title": "Oly Sokáig Voltunk Lenn...",
+        "artist": "Hobo Blues Band",
+        "country": "Hungary",
+        "year": "1982",
+        "genre": "Rock",
+        "style": ["Blues Rock", "Classic Rock"],
+        "tracklist": ["Tisztelet Muddy Waters-nek", "Enyém, Tiéd, Miénk", "Kőbánya Blues", "Tetovált Lány", "Hosszúlábú Asszony", "Oly Sokáig Voltunk Lenn...", "Mata Hari", "Nem Hallod, Üvöltök", "A Hetedik", "Halál Apa Blues"]
+    }
+]
+
